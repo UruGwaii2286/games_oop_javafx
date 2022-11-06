@@ -32,10 +32,4 @@ class BishopBlackTest {
         Cell[] expected = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
         assertThat(actual).isEqualTo(expected);
     }
-
-    @Test
-    public void bishopBlackDiagonal() {
-        BishopBlack bishopBlack = new BishopBlack(Cell.C1);
-        bishopBlack.way(Cell.F4);
-    }
 }
