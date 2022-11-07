@@ -26,9 +26,9 @@ public class LogicTest {
             throws FigureNotFoundException, OccupiedCellException, ImpossibleMoveException {
         Logic logic = new Logic();
         logic.add(new BishopBlack(Cell.C1));
-        logic.add(new KingBlack(Cell.C3));
+        logic.add(new KingBlack(Cell.D2));
         OccupiedCellException exception = assertThrows(OccupiedCellException.class, () -> {
-            logic.move(Cell.C3, Cell.C1);
+            logic.move(Cell.C1, Cell.D2);
         });
         assertThat(exception.getMessage()).isEqualTo("Cell is occupied");
     }
